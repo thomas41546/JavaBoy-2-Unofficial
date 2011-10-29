@@ -1,0 +1,77 @@
+JavaBoy What's New?
+-------------------
+
+Version 0.92
+------------
+
+Emulation Changes
+- Fixed LCDC interrupt LCY flag.  Fixes crash in 'Max', 'Rayman GBC', 'Donkey Kong Country'.
+- Fixed problem when grabbing the next instruction when executing right next to the 
+  end of memory.  Fixes crahes on 'G&W Gallery 3', 'Millipede/Centipede' and others
+- Fixed P10-P13 interrupt handling.  Fixes controls in Double Dragon 3 menus, 
+  Lawnmower Man, and others.
+- Added hack to unscramble status bars on many games (Aladdin, Pokemon Pinball)
+  that change bank address just before the window starts
+- Changed sprite hiding behaviour.  Now sprites are turned on if they're visible anywhere
+  in the frame.  (Elevator Action, Mortal Kombat 4)
+- Fixed debug breakpoint detection (Micro Machines 2, Monster Race 2, others)
+- Changed VBlank line to fix white screen on startup (Home Alone, Dragon Tales)
+- Added extra condition to LCD interrupts - that the display should be enabled.
+- Fixed comparison with LCY register, Austin Powers - Oh Behave! now works, and GTA status bar isn't scrambled.
+- Fixed BG enable on GBC.  Dragon Ball Z now works.
+
+New Features
+- Added support for MBC3 mapper chip.  MBC3 games now work (Pokemon Blue/Crystal/Gold/Silver, Harvest Moon)
+- Added emulation of the Game Boy Printer (only in application mode for now)
+
+Applet mode changes (when running on a web page)
+- Fix online save RAM bugs
+
+
+
+Version 0.91
+------------
+
+Applet Mode Changes (when running on a web page)
+- Switch menu from click to double-click to avoid problem with setting focus
+- Added Save to Web feature
+- Added reset option to menu
+- Fixed bad update to border when applet window covered (only on microsoft VM)
+
+Emulation Changes
+- Fixed printing of HDMA data to console slowing down games - Done
+
+
+Version 0.9
+-----------
+
+Applet Mode Changes (when running on a web page)
+- Fixed ROMS with save RAM not loading when on a web page
+- Applets can be sized other than 1x
+- Applets show strip showing current ROM and other info displayed at start
+- Applets have options menu providing control change, size change, frameskip change, sound toggle
+- Applets have a parameter to turn sound on/off in the applet tag
+
+Application Mode Changes (when running stand-alone)
+- Half-fixed keyboard controls sometimes not starting in application version
+- Fixed random keypressed causing an exception when no ROM loaded
+
+General changes
+- ROMS can optionally be loaded from ZIP/JAR and GZip compressed files (code contributed by Stealth Software)
+
+Emulation Changes
+- Much more accurate emulation of sound channel 4 (noise)
+- Flipped double height sprites are now handled properly
+
+
+v0.81beta
+---------
+
+- Corrected bug in LCDC register for hiding sprites
+- Fixed tile cache memory bug
+
+
+v0.8beta
+--------
+
+- Initial release
